@@ -32,6 +32,7 @@
         </mat-error>
       </mat-form-field>
       <mat-form-field class="example-full-width">
+        <input matInput placeholder="Input">
         <ckeditor matCkeditor placehoder="Category Content" formControlName="catContent"></ckeditor>
         <mat-error>
           <span *ngIf="!categoryForm.get('catContent').valid && categoryForm.get('catContent').touched">Please enter Category Description</span>
