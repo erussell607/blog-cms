@@ -1,7 +1,7 @@
 import {Router} from '@angular/router';
 import {Category} from './category/category';
-import {HomeService} from './services/home.service';
-import {AuthService} from './services/auth.service';
+import {HomeService} from './home.service';
+import {AuthService} from './auth.service';
 import {Component, OnInit} from '@angular/core';
 
 @Component({

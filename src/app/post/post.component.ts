@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {PostService} from '../services/post.service';
+import {PostService} from '../post.service';
 import {Post} from './post';
 
 @Component({
@@ -27,5 +27,4 @@ export class PostComponent implements OnInit {
         this.isLoadingResults = false;
       });
   }
-
 }

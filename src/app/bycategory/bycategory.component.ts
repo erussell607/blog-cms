@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Post} from '../post/post';
-import {HomeService} from '../services/home.service';
+import {HomeService} from '../home.service';
 
 @Component({
   selector: 'app-bycategory',

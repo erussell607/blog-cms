@@ -3,8 +3,8 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 import {Category} from './../../category/category';
-import {PostService} from "../../services/post.service";
-import {CategoryService} from "../../services/category.service";
+import {PostService} from "../../post.service";
+import {CategoryService} from "../../category.service";
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {

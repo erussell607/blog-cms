@@ -37,6 +37,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CKEditorModule} from 'ckeditor4-angular';
 import {MatContenteditableModule} from 'mat-contenteditable';
 import {MatGridListModule} from "@angular/material/grid-list";
+import {MatOptionModule} from "@angular/material/core";
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   declarations: [
@@ -76,7 +78,9 @@ import {MatGridListModule} from "@angular/material/grid-list";
     MatToolbarModule,
     CKEditorModule,
     MatContenteditableModule,
-    MatGridListModule
+    MatGridListModule,
+    MatOptionModule,
+    MatSelectModule
   ],
   providers: [
     {
