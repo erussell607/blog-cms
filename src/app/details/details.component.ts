@@ -28,6 +28,11 @@ export class DetailsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      console.log('params: ' + params.get('postAuthor'));
+      // this.car = params.get("carBrand")
+    });
+    console.log('this.route.snapshot.params.id: ' + this.route.snapshot.params.postAuthor);
     this.getPostDetails(this.route.snapshot.params.id);
   }
 

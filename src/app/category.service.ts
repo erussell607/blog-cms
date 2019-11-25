@@ -23,7 +23,10 @@ export class CategoryService {
   }
 
   getCategory(id: any): Observable<Category> {
-    const url = `${apiUrl}/${id}`;
+    console.log('apiUrl: ' + apiUrl);
+    console.log('id: ' + id);
+    const url = `${apiUrl}${id}`;
+    console.log('const url: ' + url);
     return this.http.get<Category>(url).pipe(
       tap(_ => console.log(`fetched category by id=${id}`)),
       catchError(this.handleError<Category>(`getCategory id=${id}`))
@@ -31,6 +34,10 @@ export class CategoryService {
   }
 
   addCategory(category: Category): Observable<Category> {
+    console.log('apiUrl: ' + apiUrl);
+    console.log('category: ' + category);
+    console.log('id: ' + category.id);
+
     return this.http.post<Category>(apiUrl, category).pipe(
       tap((prod: Category) => console.log(`added category w/ id=${category.id}`)),
       catchError(this.handleError<Category>('addCategory'))
@@ -38,7 +45,7 @@ export class CategoryService {
   }
 
   updateCategory(id: any, category: Category): Observable<any> {
-    const url = `${apiUrl}/${id}`;
+    const url = `${apiUrl}${id}`;
     return this.http.put(url, category).pipe(
       tap(_ => console.log(`updated category id=${id}`)),
       catchError(this.handleError<any>('updateCategory'))
@@ -46,7 +53,11 @@ export class CategoryService {
   }
 
   deleteCategory(id: any): Observable<Category> {
-    const url = `${apiUrl}/${id}`;
+
+    console.log('apiUrl: ' + apiUrl);
+    console.log('id: ' + id);
+    const url = `${apiUrl}${id}`;
+    console.log('const url: ' + url);
     return this.http.delete<Category>(url).pipe(
       tap(_ => console.log(`deleted category id=${id}`)),
       catchError(this.handleError<Category>('deleteCategory'))
