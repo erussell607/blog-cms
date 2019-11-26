@@ -44,7 +44,7 @@ export class CategoryEditComponent implements OnInit {
 
   getCategory(id: any) {
     this.api.getCategory(id).subscribe((data: any) => {
-      this.id = data.id;
+      this.id = data._id;
       this.categoryForm.setValue({
         prod_name: data.prod_name,
         prod_desc: data.prod_desc,
@@ -57,9 +57,9 @@ export class CategoryEditComponent implements OnInit {
     this.isLoadingResults = true;
     this.api.updateCategory(this.id, this.categoryForm.value)
       .subscribe((res: any) => {
-          const id = res.id;
+        const id = res._id;
           this.isLoadingResults = false;
-          this.router.navigate(['/category-details', id]);
+        this.router.navigate(['/category/details/', id]);
         }, (err: any) => {
           console.log(err);
           this.isLoadingResults = false;
