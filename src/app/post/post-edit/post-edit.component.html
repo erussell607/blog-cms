@@ -12,7 +12,7 @@
     <form [formGroup]="postForm" (ngSubmit)="onFormSubmit()">
       <mat-form-field class="example-full-width">
         <mat-select formControlName="category" [errorStateMatcher]="matcher">
-          <mat-option *ngFor="let cat of categories" [value]="cat.id">
+          <mat-option *ngFor="let cat of categories" [value]="cat._id">
             {{cat.catName}}
           </mat-option>
         </mat-select>

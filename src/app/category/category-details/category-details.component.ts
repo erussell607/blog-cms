@@ -42,5 +42,4 @@ export class CategoryDetailsComponent implements OnInit {
         }
       );
   }
-
 }
