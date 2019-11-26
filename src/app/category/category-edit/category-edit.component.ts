@@ -68,7 +68,7 @@ export class CategoryEditComponent implements OnInit {
   }
 
   categoryDetails() {
-    this.router.navigate(['/category-details', this.id]);
+    this.router.navigate(['/category/details/', this.id]);
   }
 
 }

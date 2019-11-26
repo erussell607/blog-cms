@@ -14,7 +14,7 @@
       <p>Created by: {{post.postAuthor}}, {{post.created | date}}, updated: {{post.updated | date}}</p>
       <mat-card-subtitle>{{post.postDesc}}</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="{{post.postImgUrl}}" alt="{{post.postTitle}}">
+    <img mat-card-image src="{{post.postImgUrl}}" alt="{{post.postTitle}}" style="width:48px;height:48px;">
     <mat-card-content>
       <dl>
         <dt>Post Content:</dt>
@@ -24,10 +24,10 @@
       </dl>
     </mat-card-content>
     <mat-card-actions>
-      <a mat-flat-button color="primary" [routerLink]="['/post/edit', post.id]">
+      <a mat-flat-button color="primary" [routerLink]="['/post/edit', post._id]">
         <mat-icon>edit</mat-icon>
       </a>
-      <a mat-flat-button color="warn" (click)="deletePost(post.id)">
+      <a mat-flat-button color="warn" (click)="deletePost(post._id)">
         <mat-icon>delete</mat-icon>
       </a>
     </mat-card-actions>

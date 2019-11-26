@@ -3,14 +3,14 @@
        *ngIf="isLoadingResults">
     <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
   </div>
-  <mat-card class="example-card" [routerLink]="['/details/', post.id]">
+  <mat-card class="example-card" [routerLink]="['/details/', post._id]">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{post.postTitle}}</mat-card-title>
       <p>By: {{post.postAuthor}}, {{post.updated | date: 'dd MMM yyyy'}}</p>
       <mat-card-subtitle>{{post.postDesc}}</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="{{post.postImgUrl}}" alt="{{post.postTitle}}">
+    <img mat-card-image src="{{post.postImgUrl}}" alt="{{post.postTitle}}" style="width:48px;height:48px;">
     <mat-card-content [innerHTML]="post.postContent"></mat-card-content>
     <mat-card-actions>
       <button mat-button>LIKE</button>
